@@ -7,9 +7,7 @@ String.prototype.getDeletions = function(){
 }
 
 function alternatingCharacters(arr) {
-    let DeletionArr = [];
-    arr.forEach(string => DeletionArr.push(string.getDeletions()));
-    return DeletionArr;
+    return arr.map(string => string.getDeletions());
 }
 
 export { alternatingCharacters };
