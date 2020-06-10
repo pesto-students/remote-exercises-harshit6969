@@ -20,7 +20,7 @@ const Handler = {
 
 
 function negativeIndex(arr) {
-    if (!(arr instanceof Array)) throw new TypeError("Only arrays are supported");
+    if (!Array.isArray(arr)) throw new TypeError("Only arrays are supported");
     return new Proxy(arr, Handler);
 }
 
